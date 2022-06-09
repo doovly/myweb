@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ex51.html -->
+  <title>연습문제14 - 강아지블로그를 Flexbox로 구현하기</title>
+  <style>
+    * { margin: 0; padding: 0; list-style:none;  }
+    body{background-color:aqua;}
+    #wrap {
+      /* width: 100%; */
+      width: 1000px;
+      margin: 0 auto;
+      /* border: 1px solid #333; */
+      
+    }
+    #header{
+        color: black;
+        margin: 10px;
+        justify-content: center;
+        height: 50px;
+    }
+    #header h2 {
+      text-align: center;
+      vertical-align: middle;
+      line-height: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    #nav{
+        color: white;
+        background-color:#26c2c5;
+        padding: 10px;
+        justify-content: center;
+        margin: 10px;
+        height: 10px;
+    }
+    #nav a {
+      /* 상하좌우 마진 5px */
+      margin: 0px 10px;
+      line-height: 10px;
+      vertical-align: middle;
+    }
+    #nav a:link {
+      color: white;
+      text-decoration: none;
+    }
+    #section a {
+        text-decoration: none;
+        color:black;}
+    #section{
+        margin: 10px 20px;
+        padding: 15px;
+        flex-grow: 1;
+        border: 1px solid black;
+        flex-direction: column;
+    }
+    #aside{
+        color: black;
+        height: 300px;
+        flex-grow: 3;
+        flex-direction: column;
+        margin: 5px;
+        padding: 10px;
+    }
+    #footer{
+        background-color: rgb(192, 192, 192);
+        padding: 10px;
+        margin: 10px;
+        justify-content: center;
+        height: 30px;
+    }
+    #footer a {
+      /* 상하좌우 마진 5px */
+      margin: 0px 10px;
+      line-height: 30px;
+      vertical-align: middle;
+    }
+    #footer a:link {
+      color: black;
+      text-decoration: none;
+    }
+    .box{
+        display: flex ;
+        flex-direction: row;}
+    img{width: 200px;}
+   
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box" id="header"><h2>말티즈 - Maltese</h2></div>
+    <div class="box" id="nav">
+        <a href="#">About</a>
+        <a href="#">History</a>
+        <a href="#">Information</a>
+        <a href="#">SNS</a>
+    </div>
+    <div class="box" id="main">
+      <div class="box" id="section">
+        <h4>Maltese</h4>
+        <img src="maltese.jpg" alt="말티즈">
+        <ul>
+          <li><a href="#">● 기본특성</a></li>
+          <li><a href="#">● 단점</a></li>
+          <li><a href="#">● 키울 시 주의점</a></li>
+          <li><a href="#">● 파생 혼종견</a></li>
+        </ul>
+      </div>
+      <div class="box" id="aside">
+        <h3>maltese</h3><br>
+            <p>작은 체구와 깨끗해 보이는 하얀 털을 가진 귀여운 외모로 한국에서 반려견으로 인기가 많은 종이다. 특히 다른 견종에 비해 털빠짐이 적고, 대체적으로 특별하게 까다로운 점이 질병 말고는 딱히 없기 때문에 강아지를 처음 키우는 사람들에게 비교적 적합한 견종이며, 아파트 같은 주택 내에서도 비교적 키우기 수월하여 한국인들의 사랑을 듬뿍 받고 있다. 약간씩의 차이는 있지만, 대부분의 조사에서 한국인이 가장 선호하는 견종 1위에 올라있다</p>
+            <br><p>지중해 지역이 원산지로 추정되며, 원래는 항해 중 선내의 쥐를 잡기 위해서 작지만 재빠르고 활동량이 많은 종으로 개량되었다. 갈색, 회색, 그리고 흰색 몰티즈가 존재했으나 지금은 갈색이 섞인 몰티즈는 희귀하다. 거의 흰색 품종만 남았다. 소형견들이 점차 더 소형화되고 있어서 우리나라에서는 요즘 1.8kg보다 작은 몰티즈도 매우 흔하다. 물론 3~6kg 이상 되는 거대 말티즈도 종종 보인다.</p>
+            <br><h5>참조 : 나무위키 - 말티즈</h5>
+      </div>
+    </div>
+    <div class="box" id="footer">
+        <a href="#">Subscribe</a>
+        <a href="#">About Author</a>
+        <a href="#">Send us Email</a>
+    </div>
+  </div>
+</body>
+</html>
